@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ff4d6a; /* Reddish-pink background color */
+            color: #fff; /* White text color */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .envelope {
+            position: relative;
+            background-image: url('photo4.png'); /* Yellow envelope image */
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 400px; /* Increased size */
+            height: 300px; /* Increased size */
+            padding: 20px;
+            cursor: pointer;
+        }
+        .letter {
+            display: none;
+        }
+        button {
+            background-color: #ff4d6a; /* Reddish-pink button color */
+            color: #fff; /* White text color */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        button:hover {
+            background-color: #e43a55; /* Darker pink button color on hover */
+        }
+        .heart {
+            font-family: 'Pacifico', cursive; /* Unique font */
+            color: white; /* White color */
+            font-size: 36px; /* Font size */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .open-text {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 36px; /* Adjust size of the text */
+            color: #f8f5f6; /* Reddish-pink color */
+            opacity: 0; /* Initially hidden */
+            animation: flicker 2s infinite; /* Flickering animation */
+        }
+        @keyframes flicker {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="envelope" onclick="openEnvelope()">
+            <div class="open-text">Open</div> <!-- Flickering "Open" text -->
+           
+        </div>
+    </div>
+
+    <script>
+        function openEnvelope() {
+            // Redirect to another page when envelope is clicked
+            window.location.href = "message.html";
+        }
+    </script>
+</body>
+</html>

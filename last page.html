@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ff4d6a; /* Reddish-pink background color */
+            color: #fff; /* White text color */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative; /* Position relative for containing the "No" button */
+        }
+        .response {
+            max-width: 600px;
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+            border-radius: 10px;
+            position: relative; /* Position relative for containing the "No" button */
+        }
+        p {
+            font-size: 40px;
+            line-height: 1.6;
+        }
+        button {
+            background-color:goldenrod; /* Reddish-pink button color */
+            color: #fff; /* White text color */
+            border: none;
+            padding: 15px 30px; /* Larger padding */
+            font-size: 32px; /* Larger font size */
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #e43a55; /* Darker pink button color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="response">
+            <p>Will you be my Valentine?</p>
+            <button onclick="redirectToTakenPage()">Yes</button>
+            <button onclick="redirectToRejectionPage()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectToTakenPage() {
+            window.location.href = "taken.html";
+        }
+
+        function redirectToRejectionPage() {
+            window.location.href = "rejection.html";
+        }
+    </script>
+</body>
+</html>
+
